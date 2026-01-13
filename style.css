@@ -1,0 +1,124 @@
+/* ============================================
+   SNAKE GAME - Estilos
+   Aula: Desenvolvimento de Jogos sem Engines
+   ============================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-container {
+    text-align: center;
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    color: #00ff88;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #fff;
+}
+
+.score-board span {
+    background: rgba(0, 255, 136, 0.2);
+    padding: 8px 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 255, 136, 0.3);
+}
+
+#gameCanvas {
+    border: 3px solid #00ff88;
+    border-radius: 10px;
+    background: #0a0a15;
+    box-shadow: 0 0 30px rgba(0, 255, 136, 0.3);
+}
+
+.controls {
+    margin-top: 20px;
+    color: #aaa;
+}
+
+.controls p {
+    margin-bottom: 15px;
+}
+
+button {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #0a0a15;
+    background: #00ff88;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background: #00cc6a;
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(0, 255, 136, 0.4);
+}
+
+.game-over {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(10, 10, 21, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #ff4444;
+    box-shadow: 0 0 50px rgba(255, 68, 68, 0.3);
+}
+
+.game-over h2 {
+    color: #ff4444;
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.game-over p {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Animação de brilho para a pontuação */
+@keyframes glow {
+    0%, 100% { text-shadow: 0 0 5px rgba(0, 255, 136, 0.5); }
+    50% { text-shadow: 0 0 20px rgba(0, 255, 136, 0.8); }
+}
+
+#score {
+    animation: glow 2s infinite;
+}
